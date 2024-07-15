@@ -1,0 +1,54 @@
+/* this contains container styles
+*/
+
+.container{
+    /*extra small*/
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    /*SMALL*/
+    @media (min-width: 576px) {
+        max-width: 540px;
+        padding: 0;
+    }
+
+    /*MEDIUM*/
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    /*LARGE*/
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+    
+    /*X-LARGE*/
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    text-align: center;
+
+    /*LARGE*/
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    //MEDIUM
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 0 10px;
+    }
+}
+
+.box-shadow{
+    box-shadow: 11px 10px 38px 0 rgb(46 63 99 / 15%);
+}

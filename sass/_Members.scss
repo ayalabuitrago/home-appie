@@ -1,0 +1,114 @@
+.Members{
+    margin-top: 100px;
+    .container{
+        .content{
+            text-align: center;
+            .card-container{
+                .card{
+                    .team-picture{
+                        position: relative;
+                        align-items: center;
+                        overflow: hidden;
+                        .img{
+                            background-blend-mode: multiply;
+                            min-height: 270px;
+                            max-width: 300px;
+                            margin: 0 auto;
+                            transition: all 0.5s;
+                            
+                        }
+                        .socials{
+                            position: absolute;
+                            display: flex;
+                            top: 15px;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            justify-content:center;
+                            align-items: flex-end;
+                            gap: 5px;
+                            opacity: 0;
+                            transition: all 0.5s;
+                            i{
+                                display: block;
+                                width: 40px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                border: 2px solid white;
+                                color: white;
+                                border-radius: 50%;
+                                margin-bottom: 30px;
+                                cursor: pointer;
+                                transition: all 1s;
+                                font-size: 18px;
+                                &:hover{
+                                    background-color: white;
+                                    color: var(--blue);
+                                }
+                            }
+                        }
+                    }
+
+                    h4{
+                        margin-top: 15px;
+                        font-size: 1.1em;
+                        font-weight: 500;
+                    }
+                    p{
+                        color: var(--gray);
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+
+                    &:nth-child(1){
+                        .team-picture{
+                            .img{
+                                background: url("../images/team/team-1.jpg") no-repeat top center/cover;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        .team-picture{
+                            .img{
+                                background: url("../images/team/team-2.jpg") no-repeat top center/cover;
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        .team-picture{
+                            .img{
+                                background: url("../images/team/team-3.jpg") no-repeat top center/cover;
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        .team-picture{
+                            .img{
+                                background: url("../images/team/team-4.jpg") no-repeat top center/cover;
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        .team-picture{
+                            .img{
+                                background-color: rgba($color: #000000, $alpha: 0.35);
+                                transform: scale(1.15,1.15);
+                                
+                            }
+                            .socials{
+                                top: 0;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-style{
+                margin: 60px auto 0 auto;
+            }
+        }
+    }
+}

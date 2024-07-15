@@ -1,0 +1,119 @@
+.Traffic{
+    padding-top:  100px;
+    position: relative;
+    max-width: 2100px;
+    margin: 0 auto;
+    .container{
+        .traffic-container{
+            width: 50%;
+            
+            .section-title-container{
+                max-width: 100%;
+            }
+            .traffic-card-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 30px;
+                margin-bottom: 30px;
+                .card{
+                    display: flex;
+                    max-width: max-content;
+                    margin: 0 auto;
+                    .icon{
+                        height: max-content;
+                        width: max-content;
+                        margin-right: 10px;
+                        i{
+                            display: block;
+                            height: 30px;
+                            width: 30px;
+                            text-align: center;
+                            line-height: 30px;
+                            border-radius: 50%;
+                            color: white;
+                        }
+                        
+                    }
+                    .description-p{
+                        font-size: 15px;
+                    }
+                    &:nth-child(1){
+                        .icon{
+                            i{
+                                background: linear-gradient(135deg, #84bcfa 0%, #2b70fa 100%);
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        .icon{
+                            i{
+                                background: linear-gradient(135deg, #f7b8af 0%, #f8452d 100%);
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        .icon{
+                            i{
+                                background: linear-gradient(135deg, #a0eac2 0%, #31c369 100%);
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        .icon{
+                            i{
+                                background: linear-gradient(135deg, #d8aaff 0%, #9b2cfa 100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .traffic-img-container{
+        position: absolute;
+        top: 100px;
+        right: 0;
+
+        img{
+            width: 600px;
+            @media (max-width: 1200px) {
+                width: 550px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1140px){
+    .Traffic{
+        .container{
+            .traffic-container{
+                width: 100%;
+            }
+        }
+        
+        .traffic-img-container{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .Traffic{
+        padding-top:  60px;
+        .container{
+            .traffic-container{
+                width: 100%;
+                grid-template-columns: 1fr;
+                .traffic-card-container{
+                    @media (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+

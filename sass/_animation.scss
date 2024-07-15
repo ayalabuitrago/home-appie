@@ -1,0 +1,123 @@
+//this contains the animation scroll on cards and containers
+
+//Cards' animation
+.card-animation{
+    .card{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+.card-animation{
+    .card.on{
+        animation: move 1.35s ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes move{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+//ANIMATIONS UP,  DOWN, RIGHT, LEFT
+.animation{
+    opacity: 0;
+}
+
+//up
+.animation.up{
+    transform: scaleY(15px);
+}
+.animation.up.on{
+    animation: up 1.35s ease-out;
+}
+
+//left
+.animation.left{
+    transform: scaleX(-15px);
+}
+.animation.left.on{
+    animation: left 1.35s ease-out;
+}
+
+//right
+.animation.right{
+    transform: scaleX(15px);
+}
+.animation.right.on{
+    animation: right 1.35s ease-out;
+}
+
+
+
+.animation.on{
+    opacity: 1;
+    transform: translate(0);
+}
+
+@keyframes up{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes left{
+    0%{
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right{
+    0%{
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+//BAR ANIMATIONS
+.bar-animate{
+    height: 3px;
+    width: 0;
+    background-color: var(--blue);
+    animation: fillBar 4.5s ease-in-out infinite;
+}
+
+@keyframes fillBar{
+    0%{
+        width: 0;
+    }
+    25%{
+        width: 25%;
+    }
+    50%{
+        width: 50%;
+    }
+    75%{
+        width: 75%;
+    }
+    100%{
+        width: 100%;
+    }
+}

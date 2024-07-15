@@ -1,0 +1,104 @@
+/*
+    this contains button styles
+
+    BTN-STYLE: border, display-icon
+    BTN-HOVER-ANIMATE: styles for hover animation events on buttons 
+*/
+
+.group-button{
+    margin-top: 45px;
+    display: flex;
+    gap: 10px;
+    @media (max-width: 992px) {
+        justify-content: center;
+    }
+    @media (max-width: 450px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.btn-style{
+    display: flex;
+    gap: 10px;
+    color: var(--font-color-h);
+    padding: 15px 35px;
+    border-radius: 10px;
+    max-width: max-content;
+    font-size: 14px;
+    align-items: center;
+}
+
+
+.btn-hover-animate{
+    position: relative;
+    font-weight: 500;
+    span{
+        z-index: 2;
+    }
+    i{
+        z-index: 2;
+    }
+}
+
+.btn-hover-animate::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    background-color: rgba($color: #0e1133, $alpha: 1);
+    transition-duration: 0.45s;
+}
+
+.btn-hover-animate:hover::after{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.btn-style.btn-blue{
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+
+.btn-style.btn-dark{
+    color: white;
+    background-color: #0e1133;
+    transition: color 0.5s;
+    border: 2px solid #0e1133;
+    &:hover{
+        color: #0e1133;
+        background-color: #0e1133;
+    }
+    &.btn-hover-animate::after{
+        background-color: rgba($color: #fff, $alpha: 1);
+    }
+}
+
+.btn-white{
+    border: 2px solid #0e1133;
+    transition: 0.5s;
+    &:hover{
+        color: #fff;
+        background-color: #0e1133;
+    }
+}
+
+.btn-style.btn-more-style{
+    border: 2px solid #e7eaef;
+    font-weight: 500;
+    color: var(--font-color-p);
+    transition: all 0.35s;
+    &:hover{
+        color: white;
+        background-color: var(--blue);
+    }
+}
